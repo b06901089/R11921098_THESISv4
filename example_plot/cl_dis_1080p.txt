@@ -1,0 +1,80 @@
+person, 107113
+bicycle, 4621
+car, 22648
+motorbike, 1336
+aeroplane, 1008
+bus, 606
+train, 745
+truck, 1590
+boat, 7185
+traffic light, 7175
+fire hydrant, 737
+stop sign, 169
+parking meter, 208
+bench, 1880
+bird, 324
+cat, 20
+dog, 397
+horse, 1493
+sheep, 23
+cow, 2888
+elephant, 1970
+bear, 27
+zebra, 796
+giraffe, 4
+backpack, 1424
+umbrella, 3449
+handbag, 5253
+tie, 508
+suitcase, 634
+frisbee, 72
+skis, 80
+snowboard, 99
+sports ball, 1888
+kite, 1110
+baseball bat, 190
+baseball glove, 519
+skateboard, 365
+surfboard, 640
+tennis racket, 648
+bottle, 349
+wine glass, 203
+cup, 819
+fork, 22
+knife, 74
+spoon, 26
+bowl, 369
+banana, 7
+apple, 1112
+sandwich, 0
+orange, 941
+broccoli, 8
+carrot, 4
+hot dog, 0
+pizza, 6
+donut, 1
+cake, 520
+chair, 6323
+sofa, 38
+pottedplant, 3485
+bed, 17
+diningtable, 483
+toilet, 90
+tvmonitor, 814
+laptop, 34
+mouse, 73
+remote, 10
+keyboard, 7
+cell phone, 621
+microwave, 32
+oven, 94
+toaster, 0
+sink, 8
+refrigerator, 141
+book, 156
+clock, 1900
+vase, 2121
+scissors, 260
+teddy bear, 90
+hair drier, 60
+toothbrus, 6

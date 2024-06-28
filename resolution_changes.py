@@ -2,10 +2,12 @@ import argparse
 import os
 import glob
 from multiprocessing import Pool
+import time
 
 resolution_map = {
     '4K':   [3840, 2160],
     '2K':   [2560, 1440],
+    '1440p':[2560, 1440],
     '1080p':[1920, 1080],
     '720p': [1280, 720],
     '540p': [960, 540],
@@ -24,6 +26,8 @@ def transcode(param):
     UHD_path = param[5]
     args = param[6]
 
+    preset = 'medium'
+
     if not os.path.isdir(os.path.join(args.inter, f'Inter4K/60fps/{name}')):
         os.makedirs(os.path.join(args.inter, f'Inter4K/60fps/{name}'), exist_ok=True)
     if os.path.isfile(os.path.join(args.inter, f'Inter4K/60fps/{name}/{filename}')):
@@ -31,9 +35,9 @@ def transcode(param):
         return
     
     if args.crf != -1:
-        os.system(f'ffmpeg -i {UHD_path}/{filename} -c:v libx264 -vf scale={width}:{height} -crf {args.crf} ../../Datasets/Inter4K/Inter4K/60fps/{name}/{filename}')
+        os.system(f'ffmpeg -i {UHD_path}/{filename} -c:v libx264 -preset {preset} -vf scale={width}:{height} -crf {args.crf} ../../Datasets/Inter4K/Inter4K/60fps/{name}/{filename}')
     elif args.qp != -1:
-        os.system(f'ffmpeg -i {UHD_path}/{filename} -c:v libx264 -vf scale={width}:{height} -qp {args.qp} ../../Datasets/Inter4K/Inter4K/60fps/{name}/{filename}')
+        os.system(f'ffmpeg -i {UHD_path}/{filename} -c:v libx264 -preset {preset} -vf scale={width}:{height} -qp {args.qp} ../../Datasets/Inter4K/Inter4K/60fps/{name}/{filename}')
     else:
         print('Error: Incorrect Parameter Settings!')
 
@@ -54,13 +58,14 @@ if args.res in resolution_map:
     resolutions[args.name] = resolution_map[args.res]
 else:
     print('Error: Incorrect Parameter (resolution) Settings!')
-    with open(p['log_name'], 'a') as f:
+    with open(args.log, 'a') as f:
         f.write('Error: Incorrect Parameter (resolution) Settings!\n')
 
 FPS_path = os.path.join(args.inter, 'Inter4K/60fps')
 UHD_path = os.path.join(FPS_path, 'UHD')
 raw_path = os.path.join(UHD_path, '*.mp4')
 
+start_time = time.time()
 for file in glob.glob(raw_path):
     filename = file.split('/')[-1]
 
@@ -76,3 +81,6 @@ for file in glob.glob(raw_path):
 
         with Pool(16) as p:
             print(p.map(transcode, targets))
+end_time = time.time()
+with open(args.log, 'a') as f:
+    f.write("execution time for video transcode: %s seconds " % (end_time - start_time))

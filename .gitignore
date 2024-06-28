@@ -2,6 +2,7 @@
 mAP/
 BasicVSR_PlusPlus/
 yolov5/
+config/
 
 # YOLO model
 *.pt
