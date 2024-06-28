@@ -173,6 +173,40 @@ pip install ultralytics
 
 And then use this sepcific environment to run `detect.py`.
 
+
+### v4 update
+
+1. Get the object size/class frequency distribution for our test data
+
+```
+python get_object_size_distribution --img_dir <folder path of video frames of certain resolution>
+```
+
+Ex:
+
+```
+python get_object_size_distribution --img_dir ../../Datasets/Inter4K/Inter4K_frame/60fps/1080p
+```
+
+Results will be stored under `plot/`.
+
+2. Get execution time for video transcoding
+
+The execution time will now simply be showed in logs. 
+(i.e. Trasncode videos with different CRF/CQP and Resolution will get you the time.)
+If you don't know how to transcode videos, see [Demo Video part 4 - Demo visualization](https://youtu.be/V4gepF-8xaE).
+(use `run.py` with `--cfg config/get_ground_truth.json` with different `crf`, `qp`, and `res` values.)
+
+
+### FAQ
+
+1. Getting Error `Error: Files with same names already exist, please remove them and try it again!`
+A: You have to delete the files/folders manually with the same folder name/path. i.e. If you want to transcode videos into a same resolution but different crf/qp values, you will need to delete your previously transcoded videos. Because transcoded videos are stored in foldere created according to the target resolution. E.g. `../../Datasets/Inter4K/Inter4K_frame/60fps/1080p`
+
+2. You can change the name of the config files to whatever you want, the code will read the parameter `mode` in the json files anyway.
+
+3. FFmpeg's `preset` flag isn't an option in config files. There is a variable in `resolution_changes.py` defined as `preset`, just alter that if you wish to change it. All `preset` options can be found [here](https://trac.ffmpeg.org/wiki/Encode/H.264#Preset).
+
 ### Code Reference
 
 ```
