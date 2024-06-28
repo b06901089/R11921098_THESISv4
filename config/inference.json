@@ -1,0 +1,14 @@
+{
+  "mode": "Inference",
+  "log": "./My_log",
+  "source": "/home/aaron/miniconda3/etc/profile.d/conda.sh",
+  "start": 1,
+  "end": 1,
+  "crf": [0,2],
+  "qp": -1,
+  "inter": "../../Datasets/Inter4K",
+  "res": "270p",
+  "GT_res": "1080p",
+  "pyenv": "my_env",
+  "remove_data": "True"
+  }

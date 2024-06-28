@@ -1,0 +1,53 @@
+Parameters:
+
+##########
+mode: Get Low Quality
+log: ./My_log/run0
+source: /home/aaron/miniconda3/etc/profile.d/conda.sh
+start: 1
+end: 100
+crf: 0
+qp: -1
+inter: ../../Datasets/Inter4K
+res: 270p
+GT_res: 1080p
+pyenv: python3.8
+vsrenv: basicvsr
+name: 270p
+log_name: ./My_log/run0/2024_5_10_15_37_48_log.txt
+##########
+
+bitrates: 20.91221184M
+
+BI4x_270p:
+frame count: 29977
+average PSNR: 34.86340526001362
+
+FSRCNN4x_270p:
+frame count: 29977
+average PSNR: 35.14785569877677
+
+BasicVSRplusplus_VSRx4_270p:
+frame count: 29977
+average PSNR: 35.573318111676315
+
+
+
+##########
+270p, average mAP: 29.042187500000008, video count: 96
+##########
+
+
+##########
+BI4x_270p, average mAP: 29.62718750000001, video count: 96
+##########
+
+
+##########
+FSRCNN4x_270p, average mAP: 44.03093749999997, video count: 96
+##########
+
+
+##########
+BasicVSRplusplus_VSRx4_270p, average mAP: 51.84125, video count: 96
+##########

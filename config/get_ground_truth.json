@@ -1,0 +1,14 @@
+{
+  "mode": "Get Ground Truth",
+  "log": "./My_log",
+  "source": "/home/aaron/miniconda3/etc/profile.d/conda.sh",
+  "start": 1,
+  "end": 1,
+  "crf": 0,
+  "qp": -1,
+  "inter": "../../Datasets/Inter4K",
+  "res": "1080p",
+  "GT_res": "",
+  "pyenv": "my_env",
+  "remove_data": "True"
+}

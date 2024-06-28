@@ -1,0 +1,21 @@
+Parameters:
+
+##########
+mode: Get Ground Truth
+log: ./My_log/run0
+source: /home/aaron/miniconda3/etc/profile.d/conda.sh
+start: 1
+end: 100
+crf: 0
+qp: -1
+inter: ../../Datasets/Inter4K
+res: 1080p
+GT_res: 1080p
+pyenv: python3.8
+vsrenv: basicvsr
+name: 1080p
+log_name: ./My_log/run0/2024_5_10_15_5_33_log.txt
+##########
+
+bitrates: 235.75128036M
+

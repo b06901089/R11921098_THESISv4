@@ -1,0 +1,30 @@
+Parameters:
+
+##########
+mode: Get High Quality
+log: ./My_log/run0
+source: /home/aaron/miniconda3/etc/profile.d/conda.sh
+start: 1
+end: 100
+crf: 2
+qp: -1
+inter: ../../Datasets/Inter4K
+res: 1080p
+GT_res: 1080p
+pyenv: python3.8
+vsrenv: basicvsr
+name: 1080p_cp
+log_name: ./My_log/run0/2024_5_11_14_33_45_log.txt
+##########
+
+bitrates: 105.90470644M
+
+1080p_cp:
+frame count: 29977
+average PSNR: 50.030056725014454
+
+
+
+##########
+1080p_cp, average mAP: 90.72208333333334, video count: 96
+##########
