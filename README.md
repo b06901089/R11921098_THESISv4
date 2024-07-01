@@ -20,8 +20,8 @@ Bandwidth-Efficient Inferencing at the Edge -- An Experimental Approach to Analy
 
 Clone this repo
 ```
-git clone https://github.com/b06901089/R11921098_THESISv3.git
-cd R11921098_THESISv3/
+git clone https://github.com/b06901089/R11921098_THESISv4.git
+cd R11921098_THESISv4/
 ```
 
 Clone [mAP](<https://github.com/Cartucho/mAP>) inside the repo
