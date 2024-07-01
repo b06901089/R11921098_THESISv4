@@ -9,6 +9,8 @@ Bandwidth-Efficient Inferencing at the Edge -- An Experimental Approach to Analy
 
 [Demo Video part 4 - Demo visualization](https://youtu.be/V4gepF-8xaE)
 
+[Demo Video part 5 - revision part](https://youtu.be/z9e44XhxxfQ)
+
 [Measurement Data (csv)](https://github.com/b06901089/R11921098_THESISv3/blob/main/nslab_data.csv)/
 [Measurement Data (Google Sheets)](https://docs.google.com/spreadsheets/d/1Sc_uSJrqslbilyXWuuKgUcYN8FauxC2wiJDxMEutVpg/edit?usp=sharing)/
 [Empty Template (Google Sheets)](https://docs.google.com/spreadsheets/d/1OiAFg_P2GxH8_gPKQVUOfqzXQ58DcqLDcpOePpG8GrE/edit?usp=sharing)
@@ -194,7 +196,7 @@ Results will be stored under `plot/`.
 
 The execution time will now simply be showed in logs. 
 (i.e. Trasncode videos with different CRF/CQP and Resolution will get you the time.)
-If you don't know how to transcode videos, see [Demo Video part 4 - Demo visualization](https://youtu.be/V4gepF-8xaE).
+If you don't know how to transcode videos, see [Demo Video part 4 - Demo visualization](https://youtu.be/V4gepF-8xaE) or [Demo Video part 5 - revision part](https://youtu.be/z9e44XhxxfQ).
 (use `run.py` with `--cfg config/get_ground_truth.json` with different `crf`, `qp`, and `res` values.)
 
 
