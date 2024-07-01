@@ -18,8 +18,8 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     # Video Index (include start and end)
-    start = args.start
-    end = args.end
+    start = int(args.start)
+    end = int(args.end)
 
     # Model
     model = torch.hub.load("ultralytics/yolov5", "yolov5x6")
