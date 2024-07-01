@@ -10,7 +10,7 @@ config/
 # Output
 My_output/*
 My_log/*
-# plot/*
+plot/*
 
 # Cache
 __pycache__/
