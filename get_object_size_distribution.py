@@ -12,12 +12,14 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
 
     parser.add_argument('--img_dir', type=str)
+    parser.add_argument('--start', type=str)
+    parser.add_argument('--end', type=str)
 
     args = parser.parse_args()
 
     # Video Index (include start and end)
-    start = 1
-    end = 100
+    start = args.start
+    end = args.end
 
     # Model
     model = torch.hub.load("ultralytics/yolov5", "yolov5x6")

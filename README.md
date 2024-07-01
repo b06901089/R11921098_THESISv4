@@ -179,13 +179,13 @@ And then use this sepcific environment to run `detect.py`.
 1. Get the object size/class frequency distribution for our test data
 
 ```
-python get_object_size_distribution --img_dir <folder path of video frames of certain resolution>
+python get_object_size_distribution.py --img_dir <folder path of video frames of certain resolution> --start <start index> --end <end index>
 ```
 
 Ex:
 
 ```
-python get_object_size_distribution --img_dir ../../Datasets/Inter4K/Inter4K_frame/60fps/1080p
+python get_object_size_distribution.py --img_dir ../../Datasets/Inter4K/Inter4K_frame/60fps/1080p --start 1 --end 100
 ```
 
 Results will be stored under `plot/`.
@@ -200,8 +200,7 @@ If you don't know how to transcode videos, see [Demo Video part 4 - Demo visuali
 
 ### FAQ
 
-1. Getting Error `Error: Files with same names already exist, please remove them and try it again!`
-A: You have to delete the files/folders manually with the same folder name/path. i.e. If you want to transcode videos into a same resolution but different crf/qp values, you will need to delete your previously transcoded videos. Because transcoded videos are stored in foldere created according to the target resolution. E.g. `../../Datasets/Inter4K/Inter4K_frame/60fps/1080p`
+1. Getting Error `Error: Files with same names already exist, please remove them and try it again!`. You have to delete the folders manually with the same folder name/path. i.e. If you want to transcode videos into a same resolution but different crf/qp values (or same values), you will need to delete your previously transcoded videos. This is because transcoded videos are stored in foldere created according to the resolution. Ex: `../../Datasets/Inter4K/Inter4K/60fps/1080p`
 
 2. You can change the name of the config files to whatever you want, the code will read the parameter `mode` in the json files anyway.
 
